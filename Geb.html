@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>💝 Für Mama 💝</title>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>💝 Für Mama 💝</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+            background-attachment: fixed;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            width: 90%;
+            max-width: 360px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin: 60px auto;
+        }
+
+        input {
+            padding: 12px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 14px;
+            width: 100%;
+            border: none;
+            background: #ff69b4;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff1493;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background: white;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="login">
+    <h2>🔒 Geschützter Bereich</h2>
+    <p>Bitte Passwort eingeben</p>
+    <input type="password" id="password" placeholder="Passwort">
+    <br>
+    <button onclick="checkPassword()">Einloggen</button>
+    <p class="error" id="error"></p>
+</div>
+
+<div id="content" style="display:none;">
+    <h1>💐 Alles Gute zum Geburtstag Mama! 💐</h1>
+    <p>Ich hab diese Seite extra für dich gemacht ❤️</p> 
+    <p>Wir wünschen dir viel Gesundheit und nur das beste für dich</p>
+
+    <!-- Musik -->
+    <audio id="music" preload="none">
+    <source src="song1.mp3" type="audio/mpeg">
+</audio>
+
+
+    <!-- Galerie -->
+    <div class="gallery">
+        <img src="mama1.jpeg" alt="Bild 1">
+        <img src="mama2.jpeg" alt="Bild 2">
+        <img src="mama3.jpeg" alt="Bild 3">
+	<img src="mama4.jpeg" alt="Bild 4">
+        <img src="mama5.jpeg" alt="Bild 5">
+        <img src="mama6.jpeg" alt="Bild 6">
+	<img src="mama7.jpeg" alt="Bild 7">
+        <img src="mama8.jpeg" alt="Bild 8">
+        <img src="mama9.jpeg" alt="Bild 9">
+	<img src="mama10.jpeg" alt="Bild 10">
+        <img src="mama11.jpeg" alt="Bild 11">
+        <img src="mama12.jpeg" alt="Bild 12">
+	<img src="mama13.jpeg" alt="Bild 13">
+        <img src="mama14.jpeg" alt="Bild 14">
+        <img src="mama15.jpeg" alt="Bild 15">
+	<img src="mama16.jpeg" alt="Bild 16">
+        <img src="mama17.jpeg" alt="Bild 17">
+        <img src="mama18.jpeg" alt="Bild 18">
+	<img src="mama19.jpeg" alt="Bild 19">
+	<img src="mama20.jpeg" alt="Bild 20">
+        <img src="mama21.jpeg" alt="Bild 21">
+        <img src="mama22.jpeg" alt="Bild 22">
+	<img src="mama23.jpeg" alt="Bild 23">
+        <img src="mama24.jpeg" alt="Bild 24">
+	<img src="mama25.jpeg" alt="Bild 25">
+        <img src="mama26.jpeg" alt="Bild 26">
+        <img src="mama27.jpeg" alt="Bild 27">
+	<img src="mama28.jpeg" alt="Bild 28">
+        <img src="mama29.jpeg" alt="Bild 29">
+        <img src="mama30.jpeg" alt="Bild 30">
+	
+
+    </div>
+</div>
+
+<script>
+    const correctPassword = "38"; // PASSWORT HIER ÄNDERN
+
+    function checkPassword() {
+        const input = document.getElementById("password").value;
+        const error = document.getElementById("error");
+
+        if (input === correctPassword) {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            document.getElementById("music").play();
+        } else {
+            error.textContent = "❌ Falsches Passwort";
+        }
+    }
+</script>
+
+</body>
+</html>
